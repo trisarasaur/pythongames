@@ -8,13 +8,16 @@ time = 0
 # counting tenths of seconds into formatted string A:BC.D
 def format(total_decaseconds):
     minutes = int(total_decaseconds/600)
-    seconds = int((total_decaseconds - (minutes*600))/10)
-    decaseconds = total_decaseconds - (seconds*10) - (minutes*600)
+    #seconds = int((total_decaseconds - (minutes*600))/10)
+    #decaseconds = total_decaseconds - (seconds*10) - (minutes*600)
+    seconds = int((total_decaseconds%600)/10)
+    decaseconds = total_decaseconds%10 
     if seconds < 10:
         formatted = str(minutes)+":0"+str(seconds)+"."+str(decaseconds)
     else:
         formatted = str(minutes)+":"+str(seconds)+"."+str(decaseconds)
     return formatted
+    
     
 # define event handlers for buttons; "Start", "Stop", "Reset"
 def start():
