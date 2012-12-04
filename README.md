@@ -4,9 +4,9 @@ Must be loaded at http://www.codeskulptor.org/ to load the simplegui module.
 
 ##Mini Projects
 
-*Mini-project # 1 - Rock-paper-scissors-lizard-Spock
+* Mini-project # 1 - Rock-paper-scissors-lizard-Spock
 
-*Mini-project # 2 - "Guess the number" game
+* Mini-project # 2 - "Guess the number" game
 
 * Mini-project # 3 - "Stopwatch: The Game"
 
