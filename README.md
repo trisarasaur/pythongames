@@ -1,6 +1,6 @@
 A bunch of exercises for the Coursera interactive programming in python course from Rice (https://www.coursera.org/course/interactivepython)
 
-Must be loaded at http://www.codeskulptor.org/ to load the simplegui module.
+Most files must be pasted into http://www.codeskulptor.org/ to load the simplegui module.
 
 ##Mini Projects
 
@@ -23,4 +23,11 @@ Must be loaded at http://www.codeskulptor.org/ to load the simplegui module.
 ##Other code examples from class 
 
 * tick
+
 * calculator
+
+##Other experiments just for fun
+
+* Rock Paper Scissors Lizard Spock GUI implementation
+
+* Conway's Game of Life
