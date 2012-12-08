@@ -16,13 +16,16 @@ def init():
         i += 1
     cards = [i%8 for i in range(16)]
     random.shuffle(cards)
+    print cards
      
 # define event handlers
 def mouseclick(pos):
     global state, first_index, second_index, moves
     i = 0
     for card in cards:
-        if 50*i < pos[0] < 50*(i+1) :
+        x = i%4
+        y = int(i/4)
+        if 75*x < pos[0] < 75*(x+1) and 100*y < pos[1] < 100*(y+1):
             if face_down[i]:
                 face_down[i] = False
                 if state == 0:
@@ -46,16 +49,18 @@ def mouseclick(pos):
 # cards are logically 50x100 pixels in size    
 def draw(canvas):
     global cards
-    i = 1
+    i = 0
     for card in cards:
-        if not face_down[i-1]:
-            canvas.draw_text(str(card+1), [i*50-35, 50], 26, "White")
-        elif face_down[i-1]:
-            canvas.draw_polygon([((i-1)*50, 0), (i*50, 0), (i*50, 100), ((i-1)*50,100)], 4, "White", "Green")
+        x = i%4
+        y = int(i/4)
+        if not face_down[i]:
+            canvas.draw_text(str(card+1), [x*75+30, y*100+60], 26, "White")
+        elif face_down[i]:
+            canvas.draw_polygon([(x*75, y*100), ((x+1)*75, y*100), ((x+1)*75, (y+1)*100), (x*75,(y+1)*100)], 4, "White", "Green")
         i+=1
 
 # create frame and add a button and labels
-frame = simplegui.create_frame("Memory", 800, 100)
+frame = simplegui.create_frame("Memory", 300, 400)
 frame.add_button("Restart", init)
 l=frame.add_label("Moves = 0")
 
