@@ -12,9 +12,9 @@ Most files must be pasted into http://www.codeskulptor.org/ to load the simplegu
 
 * Mini-project # 4 - "Pong"
 
-* Mini-project # 5 - MemoryGo to assignment  
+* Mini-project # 5 - Memory 
 
-* Mini-project # 6 - BlackjackGo to assignment  
+* Mini-project # 6 - Blackjack
 
 * Mini-project # 7 - Spaceship
 
